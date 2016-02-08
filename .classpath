@@ -2,6 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="support/r01-support.jar"/>
+	<classpathentry kind="lib" path="support/recitation-support.jar"/>
+	<classpathentry kind="lib" path="support/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="support/gson-2.5.jar"/>
+	<classpathentry kind="lib" path="support/recitation-01.jar"/>
+	<classpathentry kind="lib" path="support/recitation-02.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
