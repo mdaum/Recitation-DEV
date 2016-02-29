@@ -87,11 +87,12 @@ class WS02Loops {
    * Implement a method named p05ContainerAdder. It has no parameters and returns an
    * instance of the Shapes class.
    * 
-   * It should use:
+   * Its first two lines should be:
    * 
    * WS02ShapeMaker shapeMaker = new WS02ShapeMaker();
    * 
    * ArrayList<Rectangle> squares = shapeMaker.squares();
+   * 
    * 
    * Similar to problem 3. The method should instantiate a Shapes object and use
    * a while loop to add each Square object in the ArrayList to the Shapes
