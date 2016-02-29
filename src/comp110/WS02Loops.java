@@ -54,15 +54,6 @@ class WS02Loops {
       i++;
     }
 
-    i = 0;
-    ArrayList<Rectangle> squares = shapeMaker.squares();
-    while (i < squares.size()) {
-      container.add(squares.get(i));
-      squares.get(i).setX(i * 10.0);
-      squares.get(i).setY(i * 10.0);
-      i++;
-    }
-
     return container;
   }
 
