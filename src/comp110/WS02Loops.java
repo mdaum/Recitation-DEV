@@ -40,6 +40,8 @@ class WS02Loops {
    * The WS02RandomShapes class can generate shapes for us at random. Our method
    * should return a Shapes container of all circles with a radius larger than
    * 10 added.
+   * 
+   * Use Circle's double getRadius() method to determine its radius.
    */
   Shapes p03RadiusTester() {
     WS02ShapeMaker shapeMaker = new WS02ShapeMaker();
