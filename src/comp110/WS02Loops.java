@@ -67,8 +67,11 @@ class WS02Loops {
   /**
    * Problem 4
    * 
-   * Implement a method called p04Average that takes in an int and returns the
-   * average of numbers 1 to that int.
+   * Implement a method called p04Average that takes in a double parameter and returns 
+   * the average of numbers 1 to that double. Its return type should be a double.
+   * 
+   * For example, with an 5:
+   * (1+2+3+4+5)/5 = 3
    * 
    * Note that the formula for average is the sum of all numbers of interest
    * divided by the count of numbers.
@@ -96,7 +99,7 @@ class WS02Loops {
    * You don't want all the Squares to be on top of each other. You can use void
    * setX(double x), void setY(double y) to arrange the squares.
    * 
-   * Think about how we can translate each square by a varying amount.
+   * Think about how we can set the x and y of each square by a *varying* amount.
    * 
    * The method should return the Shapes object once all Squares have been
    * added.
