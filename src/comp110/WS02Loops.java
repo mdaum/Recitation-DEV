@@ -84,7 +84,8 @@ class WS02Loops {
   /**
    * Problem 5
    * 
-   * Implement a method named p05ContainerAdder.
+   * Implement a method named p05ContainerAdder. It has no parameters and returns an
+   * instance of the Shapes class.
    * 
    * It should use:
    * 
