@@ -7,6 +7,7 @@
 	<classpathentry kind="lib" path="support/gson-2.5.jar"/>
 	<classpathentry kind="lib" path="support/recitation-01.jar"/>
 	<classpathentry kind="lib" path="support/recitation-02.jar"/>
+	<classpathentry kind="lib" path="support/jsoup-1.8.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
