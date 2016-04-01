@@ -2,7 +2,7 @@ package comp110;
 
 import java.util.ArrayList;
 
-public class WS04SecMidtermReview {
+public class WS04SecMidtermReviewSolution {
 	/*
 	 * GUIDED SECTION
 	 * 
@@ -20,8 +20,14 @@ public class WS04SecMidtermReview {
 	 */
 	ArrayList<Rectangle> rects = WS04ShapeMaker.randomSquares(); //this the is the List we want you to use!
 	int p01AreaSum() {
-	
-		return 0;
+		int sum=0;
+		/*for (int i =0;i<rects.size();i++){ //for
+			sum+=rects.get(i).getHeight()*rects.get(i).getWidth();
+		}*/
+		for (Rectangle r : rects) {//for each
+			sum+=r.getHeight()*r.getWidth();
+		}
+		return sum;
 	}
 	
 	/**
@@ -33,21 +39,32 @@ public class WS04SecMidtermReview {
 	 */
 	
 	int p02Factorial(int n) {
-		return 0;
+		int sum=1;
+		for(int i=2;i<=n;i++){
+			sum*=i;
+		}
+		return sum;
 	}
 	
 	/**
 	 * Problem 3
 	 * 
 	 * Given an ArrayList of Strings, finish the method that creates a new ArrayList of Strings
-	 * that is reversed from the original. Use a for loop.
+	 * that is reversed from the original. Use a for loop. Note that the IndexHelper method will return
+	 * the integer representing the index you want to swap with. So if you pass in (1,ArrayList<String> array)
+	 * you will be given the number of the index you want to put that value into!
 	 * 
 	 */
-	
+	private int IndexHelper(int i, ArrayList<String> array) {
+		return array.size() - 1 - i;
+}
 	
 	ArrayList<String> p03Reverse() {
-		ArrayList<String> toReversep03 = WS04StringMaker.randomNames(); //this is the list we want you to use!
-		
+		ArrayList<String> toReversep03 = WS04StringMaker.randomNames();
+		ArrayList<String>toReturn = new ArrayList<String>();
+		for (int i=toReversep03.size();i>=0;i--){
+			toReturn.set(IndexHelper(i,toReversep03),toReversep03.get(i) );
+		}
 		return null;
 	}
 	
@@ -71,21 +88,26 @@ public class WS04SecMidtermReview {
 	 * then return the ArrayList. 
 	 * 
 	 * Secondly, finish the p04Reverse method. This method should use our p04swap method to 
-	 * reverse the elements in the given ArrayList. Use a for loop. Note the helper method. The 
-	 * p04IndexHelper method returns the index of the element that we want to swap it with given
+	 * reverse the elements in the given ArrayList. Use a for loop. Note the helper method. Recall that the 
+	 * IndexHelper method returns the index of the element that we want to swap it with given
 	 * that we are reversing the element. So if we give the method i = 2 and an array of size 6, it
 	 * will return 3. Make sure this makes sense- it helps to draw it out!
 	 * 
 	 */
 	
-	private int p04IndexHelper(int i, ArrayList<String> array) {
-			return array.size() - 1 - i;
+	private void p04swap(int i, int j, ArrayList<String> list){
+		String temp=list.get(i);
+		list.set(i, list.get(j));
+		list.set(j, temp);
 	}
 	
 	
 	ArrayList<String> p04Reverse() {
 		ArrayList<String> toReversep04=WS04StringMaker.randomNames(); //reverse this list!
-		return null;
+		for(int i=0;i<toReversep04.size()/2;i++){
+			p04swap(i,IndexHelper(i, toReversep04),toReversep04);
+		}
+		return toReversep04;
 	}
 	
 	
@@ -103,7 +125,7 @@ public class WS04SecMidtermReview {
 			n--;
 		}
 		int fact = 1;
-		for (int i = n; i > 0;//TODO do the update! ) {
+		for (int i = n; i > 0; i = i-2 ) {
 			fact = fact * i;
 		}
 		return fact;
@@ -123,9 +145,17 @@ public class WS04SecMidtermReview {
 	 */
 	String year = WS04YearMaker.getPlayerYear(); //here is the year of the player in question
 	String p06BBallYear() {
+		if(year.equals("Sophomore")||year.equals("Junior")){
+			return "You rock!";
+		}
+		else if(year.equals("Senior")){ //though else isn't really needed here ;p
+			return "We will miss you!";
+		}
+		else if(year.equals("Freshman")){
+			return "You got this!";
+		}
+		else return "Who you?";
 		
-		return "Complete this method!";
 	}
-	
 	
 }
