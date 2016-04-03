@@ -103,7 +103,7 @@ public class WS04SecMidtermReview {
 			n--;
 		}
 		int fact = 1;
-		for (int i = n; i > 0;//TODO do the update! ) {
+		for (int i = n; i > 0;  ){//TODO do the update!
 			fact = fact * i;
 		}
 		return fact;
